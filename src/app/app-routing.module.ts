@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {QrCodeComponent} from "./modules/qr-code/qr-code.component";
 
 const rootPath = {
   qrCode: 'qr-code' as 'qr-code',
