@@ -1,3 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles file (e.g., styles.scss) */
+
+/* Importing reset styles and typography */
 @import 'reset-css';
 @import "_typography.scss";
+
+/* Apply box-sizing border-box to all elements */
+*, *:before, *:after {
+  box-sizing: border-box;
+}

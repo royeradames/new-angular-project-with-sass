@@ -1,12 +1,18 @@
-p {
-  font-family: Outfit, sans-serif;
-  font-size: .9375rem;
-  color: #7D889E;
-}
-
+@import "_colors.scss";
 h2 {
   font-family: Outfit, sans-serif;
   font-size: 1.375rem;
-  color: #1F314F;
+  color: $dark-navy;
   font-weight: 700;
+  line-height: 27.72px;
+
+}
+
+p {
+  font-family: Outfit, sans-serif;
+  font-size: .9375rem;
+  color: $gray;
+  font-weight: 400;
+  letter-spacing: 0.01175rem;
+  line-height: 18.9px;
 }
