@@ -1,6 +1,6 @@
+@import "_varibles.scss";
 .qr-code {
-
-  background-color: white;
+  background-color: $white;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@
     &-code {
       height: 17.5rem;
       width: 17.5rem;
-      background-color: #2C7DFA;
+      background-color: $gray;
       background-image: url("/assets/images/oval-background.svg");
       background-repeat: no-repeat;
       background-size: cover;
