@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
-import {QrCodeComponent} from "./qr-code.component";
+import {QrCardsComponent} from "./qr-cards.component";
 
 const qrCodePath = {
   qrCode: "qr-code" as "qr-code",
@@ -9,11 +9,11 @@ const qrCodePath = {
 const routes: Routes = [
   {
     path: qrCodePath.qrCode,
-    component: QrCodeComponent
+    component: QrCardsComponent
   },
   {
     path: qrCodePath.home,
-    component: QrCodeComponent
+    component: QrCardsComponent
   },
 ]
 
@@ -23,5 +23,5 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class QrCodeRoutingModule {
+export class QrCardsRoutingModule {
 }

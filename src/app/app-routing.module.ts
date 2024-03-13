@@ -8,11 +8,11 @@ const rootPath = {
 const routes: Routes = [
   {
     path: rootPath.qrCode,
-    loadChildren: () => import("./modules/qr-code/qr-code-routing.module").then((m) => m.QrCodeRoutingModule)
+    loadChildren: () => import("./modules/qr-cards/qr-cards-routing.module").then((m) => m.QrCardsRoutingModule)
   },
   {
     path: rootPath.home,
-    loadChildren: () => import("./modules/qr-code/qr-code-routing.module").then((m) => m.QrCodeRoutingModule)
+    loadChildren: () => import("./modules/qr-cards/qr-cards-routing.module").then((m) => m.QrCardsRoutingModule)
   },
 ];
 
