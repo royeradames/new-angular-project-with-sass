@@ -1,0 +1,38 @@
+@import "_colors.scss";
+.qr-code {
+  background-color: $white;
+  padding: 1rem 1rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 20rem;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 1.25rem;
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+
+    &-code {
+      height: 18rem;
+      width: 18rem;
+      background-color: $gray;
+      background-image: url("/assets/images/oval-background.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: .625rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &-content{
+    padding: 0 1rem;
+  }
+
+}

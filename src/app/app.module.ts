@@ -1,11 +1,9 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { QrCodeComponent } from './modules/qr-cards/qr-code/qr-code.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 import {NgOptimizedImage} from "@angular/common";
-import { QrCardsComponent } from './modules/qr-cards/qr-cards.component';
 
 @NgModule({
   declarations: [
@@ -19,4 +17,5 @@ import { QrCardsComponent } from './modules/qr-cards/qr-cards.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
