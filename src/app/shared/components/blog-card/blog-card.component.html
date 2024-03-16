@@ -1,0 +1,33 @@
+<article class="blog-card">
+  <header class="blog-card-header">
+    <img
+      class="blog-card-header-image"
+      [srcset]="sharedBlogCardConfig.headerImage.href"
+      [alt]="sharedBlogCardConfig.headerImage.alt"
+      [attr.height]="sharedBlogCardConfig.headerImage.height"
+      [attr.width]="sharedBlogCardConfig.headerImage.width"
+    />
+    <div class="blog-card-header-category category">Learning</div>
+    <p class="blog-card-header-date date">{{ sharedBlogCardConfig.date }}</p>
+    <a [routerLink]="sharedBlogCardConfig.titleLink" class="blog-card-header-title-link"
+      ><h2 class="blog-card-header-title">{{ sharedBlogCardConfig.title }}</h2>
+    </a>
+  </header>
+
+  <p class="blog-card-content description">
+    {{ sharedBlogCardConfig.description }}
+  </p>
+
+  <footer class="blog-card-footer">
+    <img
+      class="footer-avatar"
+      [alt]="sharedBlogCardConfig.avatarImage.alt"
+      [src]="sharedBlogCardConfig.avatarImage.href"
+      [height]="sharedBlogCardConfig.avatarImage.height"
+      [width]="sharedBlogCardConfig.avatarImage.width"
+    />
+    <p class="footer-authors-name authors-name">
+      {{ sharedBlogCardConfig.authorsName }}
+    </p>
+  </footer>
+</article>
