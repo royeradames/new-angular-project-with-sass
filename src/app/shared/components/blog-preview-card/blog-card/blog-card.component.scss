@@ -1,0 +1,119 @@
+@import "_variables";
+.blog-card{
+  background-color: $white;
+  padding: 1.5rem;
+  border: $black-border;
+  box-shadow: $black-box-shadow-default;
+  width: 20.4375rem;
+  border-radius: 1.25rem;
+  @media(min-width: $desktop){
+    width: 24rem;
+  }
+  &:hover{
+    box-shadow: $black-box-shadow-hover;
+  }
+  &-header{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    &-title{
+        &-link {
+          text-decoration: none;
+        }
+        &:hover{
+          font-family: Figtree;
+          /* Heading */
+          font-style: normal;
+          font-weight: 800;
+          line-height: 150%; /* 36px */
+          color: $yellow;
+      }
+    }
+    &-image{
+      margin-bottom:  0.75rem;
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      border-radius: 0.625rem;
+      background: $yellow;
+    }
+    &-category{
+      display: flex;
+      padding: 0.25rem 0.75rem;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      border-radius: 0.25rem;
+      background: $yellow;
+      width: min-content;
+    }
+  }
+  &-content{
+    margin: 0.75rem 0 1.5rem;
+  }
+  &-footer{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    &-avater{
+      border-radius: 2rem;
+    }
+  }
+}
+
+//todo: import the font family
+//typography
+h2{
+  align-self: stretch;
+  font-family: Figtree;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 150%; /* 1.875rem */
+  @media(min-width: $desktop){
+    font-size: 1.5rem;
+  }
+}
+p{
+  color: $black;
+}
+p.authors-name{
+  font-family: Figtree;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 150%; /* 1.3125rem */
+}
+p.description{
+  color: $grey;
+  font-family: Figtree;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 1.3125rem */
+  @media(min-width: $desktop){
+    font-size: 1rem;
+  }
+}
+p.category{
+  font-family: Figtree, serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 150%; /* 1.3125rem */
+
+  @media(min-width: $desktop){
+    font-size: 0.875rem;
+  }
+
+}
+p.date{
+  font-family: Figtree;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 1.125rem */
+  @media(min-width: $desktop){
+    font-size: 0.875rem;
+  }
+}

@@ -1,3 +1,6 @@
 @import "_colors";
 $black-border: 1px solid $black;
-$black-box-shadow: 8px 8px 0px 0px #000;
+$black-box-shadow-default: 8px 8px 0px 0px #000;
+$black-box-shadow-hover: 16px 16px 0px 0px #000;
+
+$desktop: 1440px;

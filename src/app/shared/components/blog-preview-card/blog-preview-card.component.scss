@@ -1,0 +1,10 @@
+@import "_colors";
+.blog-preview{
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: $yellow;
+}
