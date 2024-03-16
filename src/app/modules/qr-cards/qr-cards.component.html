@@ -1,4 +1,9 @@
 <article class="cards">
   <app-qr-code></app-qr-code>
   <app-card [cardConfig]="cardConfig"></app-card>
+  <app-card *ngFor="let config of this.cards" [cardConfig]="config"></app-card>
+  <app-card *ngFor="let config of this.getterCards" [cardConfig]="config"></app-card>
+  <button (click)="changeOrder($event)">Change Order</button>
+  <button (click)="changeByPartsContent($event)">Change by parts content</button>
+  <button (click)="changeWholeContent($event)">Change Whole content</button>
 </article>
