@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BlogPreviewCardComponent } from './shared/components/blog-preview-card/blog-preview-card.component';
+import { BlogPreviewCardComponent } from './modules/blog-preview-card/blog-preview-card.component';
 
 const rootPath = {
   qrCode: 'qr-code' as 'qr-code',
