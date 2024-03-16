@@ -3,6 +3,8 @@
 /* Importing reset styles and typography */
 @import 'reset-css';
 @import "_typography.scss";
+@import "_variables";
+@import "_colors";
 
 /* Apply box-sizing border-box to all elements */
 *, *:before, *:after {
