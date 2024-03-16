@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {NgOptimizedImage} from "@angular/common";
+import { Component, Input } from '@angular/core'
+import { NgOptimizedImage } from '@angular/common'
 
 export interface ICardInput {
   title: string
