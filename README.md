@@ -1,6 +1,34 @@
 
 # Lessons Learn
 
+## How does Angular material have child nested 
+
+They have a component that only takes in children of their own custom components with `<ng-content select="app-child1"></ng-content>`
+
+Parent 
+```html
+ <div class="parent">
+    <div class="child">
+      <ng-content select="app-child1"></ng-content>
+    </div>
+    <div class="child2">
+      <ng-content select="app-child2"></ng-content>
+    </div>
+    <div class="child3">
+      <ng-content select="app-child3"></ng-content>
+    </div>
+  </div>
+```
+> children can be a normal component
+
+Use of parent
+```html
+<app-parent>
+  <app-child></app-child>
+</app-parent>
+```
+
+
 ## Setting up fonts locally
 
 Have the (variable) font file on on the asset folder, and set up a @font-face pointing to that file. Then when you call the font-family it works.
