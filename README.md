@@ -1,7 +1,19 @@
 
 # Lessons Learn
 
-# How to best handle multiple shared config files for shared components?
+## Setting up fonts locally
+
+Have the (variable) font file on on the asset folder, and set up a @font-face pointing to that file. Then when you call the font-family it works.
+
+```scss
+@font-face {
+  font-family: "Figtree";
+  src: url(../assets/fonts/Figtree-VariableFont_wght.ttf) format("woff2"), url(../assets/fonts/Figtree-Italic-VariableFont_wght.ttf) format("woff2");
+  font-display: swap;
+}
+```
+
+## How to best handle multiple shared config files for shared components?
 
 You can have each item be its own object so its easier to edit it. 
 When you have a list of does config then use a getter array.
