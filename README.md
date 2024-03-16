@@ -1,6 +1,17 @@
 
 # Lessons Learn
 
+## How to change styles of nested child component classes
+Current best solution for keeping the children encapsulation.
+
+```scss
+// In your parent component.scss
+:host ::ng-deep app-child1 {
+  .some-child-class {
+    // Your style overrides here
+  }
+}
+```
 ## How does Angular material have child nested 
 
 They have a component that only takes in children of their own custom components with `<ng-content select="app-child1"></ng-content>`
