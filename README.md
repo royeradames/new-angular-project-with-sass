@@ -1,6 +1,74 @@
 
 # Lessons Learn
 
+## Converting app.component into a standalone component
+
+### Turn on the standalone flag
+```ts
+import { Component } from '@angular/core'
+import { RouterOutlet } from '@angular/router'
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  imports: [
+    RouterOutlet,
+  ],
+  standalone: true,
+})
+export class AppComponent {
+  title = 'new-angular-project-with-sass!';
+}
+
+```
+
+> remove any import of the app.module on other standalone components
+
+### Update main.ts
+
+boostrap the app for the app.component now being a standalone component.
+
+```ts
+import { AppComponent } from './app/app.component'
+import { RouterModule, Routes } from '@angular/router'
+import { bootstrapApplication } from '@angular/platform-browser'
+import { importProvidersFrom } from '@angular/core'
+import { TodoAppComponent } from './app/modules/todo-app/todo-app.component'
+import { BlogPreviewCardComponent } from './app/modules/blog-preview-card/blog-preview-card.component'
+
+
+const rootPath = {
+  qrCode: 'qr-code' as 'qr-code',
+  blogReviewCard: 'blog-review-card' as 'blog-review-card',
+  home: '' as '',
+}
+const routes: Routes = [
+  {
+    path: rootPath.qrCode,
+    loadChildren: () =>
+      import('./app/modules/qr-cards/qr-cards-routing.module').then(
+        m => m.QrCardsRoutingModule
+      ),
+  },
+  {
+    path: rootPath.blogReviewCard,
+    component: BlogPreviewCardComponent,
+  },
+  {
+    path: rootPath.home,
+    component: TodoAppComponent,
+  },
+]
+bootstrapApplication(AppComponent, {
+  providers: [
+    importProvidersFrom(RouterModule.forRoot(routes)), // Import providers for routing, etc.
+    // ...add any global providers required for the app
+  ],
+}).catch(err => console.error(err))
+
+```
+
 ## How to change styles of nested child component classes
 Current best solution for keeping the children encapsulation.
 
