@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
-import { ISharedBlogCard } from '../../core/interfaces/shared-blog-card.interface';
+import { Component } from '@angular/core'
+import { ISharedBlogCard } from '../../core/interfaces/shared-blog-card.interface'
+import { SharedBlogCardComponent } from '../../shared/components/blog-card/blog-card.component'
+import { BlogCardComponent } from './blog-card/blog-card.component'
+import { NgForOf } from '@angular/common'
 
 @Component({
   selector: 'app-blog-preview-card',
   templateUrl: './blog-preview-card.component.html',
   styleUrls: ['./blog-preview-card.component.scss'],
+  imports: [
+    SharedBlogCardComponent,
+    BlogCardComponent,
+    NgForOf,
+  ],
+  standalone: true,
 })
 export class BlogPreviewCardComponent {
   sharedBlogCardConfig: ISharedBlogCard = {
