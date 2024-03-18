@@ -1,4 +1,5 @@
 <label class="tasks-input">
   <div class="tasks-input-circle"></div>
-  <input type="text" placeholder="Create a new todo…" class="tasks-input-control">
+  <input type="text" placeholder="Create a new todo…" class="tasks-input-control" [formControl]="task"
+         (keydown.enter)="createNewTask()">
 </label>

@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 import { NgForOf, NgOptimizedImage } from '@angular/common'
 import { TasksInputComponent } from './tasks-input/tasks-input.component'
-import { TodoAppService } from '../todo-app.service'
 import { TasksListComponent } from './tasks-list/tasks-list.component'
 import { TasksActionsComponent } from './tasks-actions/tasks-actions.component'
 

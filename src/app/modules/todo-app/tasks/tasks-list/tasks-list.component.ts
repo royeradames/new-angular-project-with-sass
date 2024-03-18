@@ -31,4 +31,14 @@ export class TasksListComponent {
   }
   constructor(private todoAppService: TodoAppService) {
   }
+
+  toggleCompletionFlag($event: MouseEvent, index: number) {
+    $event.preventDefault()
+    this.todoAppService.toggleCompletionFlag(index)
+  }
+
+  handleDelete($event: MouseEvent, index: number) {
+    $event.preventDefault()
+    this.todoAppService.removeTask(index)
+  }
 }
