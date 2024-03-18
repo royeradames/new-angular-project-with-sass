@@ -2,7 +2,7 @@ import { Component } from '@angular/core'
 import { NgClass, NgForOf, NgOptimizedImage } from '@angular/common'
 import { TodoAppService } from '../../todo-app.service'
 import { IImage } from '../../../../core/interfaces/image.interface'
-
+import { CdkDragDrop, DragDropModule, moveItemInArray } from '@angular/cdk/drag-drop'
 @Component({
   selector: 'app-tasks-list',
   templateUrl: './tasks-list.component.html',
@@ -11,6 +11,7 @@ import { IImage } from '../../../../core/interfaces/image.interface'
     NgForOf,
     NgOptimizedImage,
     NgClass,
+    DragDropModule
   ],
   standalone: true,
 })
@@ -40,5 +41,9 @@ export class TasksListComponent {
   handleDelete($event: MouseEvent, index: number) {
     $event.preventDefault()
     this.todoAppService.removeTask(index)
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.itemList, event.previousIndex, event.currentIndex);
   }
 }
