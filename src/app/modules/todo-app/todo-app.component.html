@@ -6,34 +6,12 @@
       <h1 class="todo-header-title">Todo</h1>
       <button (click)="toggleThemeMode($event, isDarkMode)" aria-label="Color theme changer"
               class="todo-header-theme-switch">
-        <img [src]="themeModeImage.href" [alt]="themeModeImage.alt"
+        <img [ngSrc]="themeModeImage.href" [alt]="themeModeImage.alt"
              height="20" width="20">
       </button>
     </header>
   </div>
 
-  <section class="todo-content tasks">
-    <app-tasks-input></app-tasks-input>
-    <label class="tasks-input">
-      <div class="tasks-input-circle"></div>
-      <input type="text" placeholder="Create a new todo…" class="tasks-input-control">
-    </label>
-    <div class="">
-      <label *ngFor="let item of itemList" class="todo-content-task">
-        <input type="checkbox" [attr.checked]="item.isCompleted">
-        {{ item.name }}
-      </label>
-      <button aria-label="Remove"><img src="assets/images/todo-app/icon-cross.svg" height="12" width="12"></button>
-    </div>
-  </section>
+  <app-tasks></app-tasks>
 
-  <footer class="todo-footer">
-    <div class="todo-footer-actions">
-      <button class="todo-footer-actions-button">All</button>
-      <button class="todo-footer-actions-button">Active</button>
-      <button class="todo-footer-actions-button">Completed</button>
-      <button class="todo-footer-actions-button">Clear Completed</button>
-    </div>
-    <p class="todo-footer-description">Drag and drop to reorder list</p>
-  </footer>
 </article>

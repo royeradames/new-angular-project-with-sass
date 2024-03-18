@@ -1,0 +1,11 @@
+.tasks{
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  &-todo{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+}

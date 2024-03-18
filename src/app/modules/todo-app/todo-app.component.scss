@@ -62,48 +62,6 @@
     flex-direction: column;
     width: 20.4375rem;
     gap: 1rem;
-
-    &-header {
-      //width: 20.4375rem;
-      //height: 3rem;
-
-
-      &-input {
-        &-wrap {
-          //display: flex;
-          //gap: .75rem;
-          //padding: 0.88rem 1.25rem;
-          //background-color: var(--background);
-        }
-
-        &-control {
-          //background: none;
-          //border: none;
-          //width: 100%;
-          //color: var(--grey);
-          //
-          ////typography
-          //font-family: var(--font-family);
-          //font-size: 0.75rem;
-          //font-style: normal;
-          //font-weight: 400;
-          //line-height: normal;
-          //letter-spacing: -0.01044rem;
-          //
-          //&:focus-visible {
-          //  outline: none;
-          //}
-
-          &-circle {
-            //height: 1.25rem;
-            //width: 1.25rem;
-            //border: var(--border-default);
-            //border-radius: 50%;
-          }
-        }
-      }
-    }
-
     &-content {
       display: flex;
       flex-direction: column;
@@ -128,11 +86,11 @@
 }
 
 // typography
-body {
+:host ::ng-deep body {
   font-family: var(--font-family);
 }
 
-h1 {
+:host ::ng-deep h1 {
   color: var(--white);
   font-family: var(--font-family);
   font-size: 2.5rem;
@@ -142,7 +100,7 @@ h1 {
   letter-spacing: 0.9375rem;
 }
 
-p {
+:host ::ng-deep p {
   color: var(--grey);
   text-align: center;
   font-size: 14px;
@@ -152,32 +110,11 @@ p {
   letter-spacing: -0.194px;
 }
 
-p.small {
+:host ::ng-deep p.small {
   color: var(--black);
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.167px;
-}
-
-.light-theme {
-  --grey: #9495A5;
-  --blue: #3A7CFD;
-  --black: #494C6B;
-  --white: #fff;
-  --background: #FAFAFA;
-  --box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);
-  --font-family: "Josefin Sans", sans-serif;
-
-}
-
-.dark-theme {
-  --grey: #5B5E7E;
-  --background-grey: #25273D;
-  --blue: #3A7CFD;
-  --black: #C8CBE7;
-  --white: #fff;
-  --background: #171823;
-  --box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.50);
 }

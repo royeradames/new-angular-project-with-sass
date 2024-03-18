@@ -1,9 +1,10 @@
 import { Component, Inject, Renderer2 } from '@angular/core'
-import { DOCUMENT, NgClass, NgForOf } from '@angular/common'
+import { DOCUMENT, NgClass, NgForOf, NgOptimizedImage } from '@angular/common'
 import { ThemeService } from '../../core/services/theme.service'
 import { Subscription } from 'rxjs'
 import { IImage } from '../../core/interfaces/image.interface'
-import { TasksInputComponent } from './tasks-input/tasks-input.component'
+import { TasksInputComponent } from './tasks/tasks-input/tasks-input.component'
+import { TasksComponent } from './tasks/tasks.component'
 
 export interface ITodoList {
   name: string
@@ -18,6 +19,8 @@ export interface ITodoList {
     NgClass,
     NgForOf,
     TasksInputComponent,
+    NgOptimizedImage,
+    TasksComponent,
   ],
   standalone: true,
 })

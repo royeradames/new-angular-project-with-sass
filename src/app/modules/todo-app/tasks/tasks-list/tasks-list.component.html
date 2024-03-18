@@ -1,0 +1,8 @@
+<div class="">
+  <label *ngFor="let item of itemList" class="todo-content-task">
+    <input type="checkbox" [attr.checked]="item.isCompleted">
+    {{ item.name }}
+  </label>
+  <button aria-label="Remove"><img ngSrc="assets/images/todo-app/icon-cross.svg" height="12" width="12"
+                                   alt="Remove"></button>
+</div>
