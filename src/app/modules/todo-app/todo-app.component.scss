@@ -54,35 +54,11 @@
       height: 1.25rem;
     }
   }
+}
 
-  &-content {
-    position: relative;
-    top: -6.5rem;
-    display: flex;
-    flex-direction: column;
-    width: 20.4375rem;
-    gap: 1rem;
-    &-content {
-      display: flex;
-      flex-direction: column;
-      &-task{
-        display: flex;
-        gap: .75rem;
-      }
-    }
-  }
-
-  &-footer {
-    &-actions {
-      &-buttons {
-
-      }
-    }
-
-    &-description {
-
-    }
-  }
+app-tasks{
+  position: relative;
+  top: -6rem;
 }
 
 // typography

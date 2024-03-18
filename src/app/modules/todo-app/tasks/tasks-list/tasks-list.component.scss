@@ -1,0 +1,41 @@
+.tasks-list{
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  width: 20.4375rem;
+  border-radius: 0.3125rem;
+  background: var(--background);
+  box-shadow: var(--box-shadow);
+  &-action{
+    color: var(--black);
+    font-family: var(--font-family);
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.01044rem;
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+    &-input{
+      border-radius: 50%;
+    }
+    &-name{
+      color: var(--black);
+      font-family: var(--font-family);
+      font-size: 0.75rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.01044rem;
+    }
+    &-completed{
+      text-decoration-line: line-through;
+      color: var(--dash-text);
+    }
+  }
+  &-close{
+
+  }
+}
