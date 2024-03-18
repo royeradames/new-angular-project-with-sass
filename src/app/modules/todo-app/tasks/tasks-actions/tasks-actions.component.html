@@ -1,0 +1,6 @@
+  <div class="actions">
+    <button class="actions-button" [ngClass]="{'actions-button-active': showingAll}" (click)="showAll($event)">All</button>
+    <button class="actions-button" [ngClass]="{'actions-button-active': showingActive}" (click)="showActive($event)">Active</button>
+    <button class="actions-button" [ngClass]="{'actions-button-active': showingCompleted}" (click)="showCompleted($event)">Completed</button>
+    <button class="actions-button" *ngIf="showClearCompleted">Clear Completed</button>
+  </div>

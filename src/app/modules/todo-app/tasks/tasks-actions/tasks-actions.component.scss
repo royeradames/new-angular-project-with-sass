@@ -1,0 +1,24 @@
+.actions {
+  display: flex;
+  gap: 1.19rem;
+  width: 20.4375rem;
+  height: 3rem;
+  border-radius: 0.3125rem;
+  background: var(--background);
+  box-shadow: var(--box-shadow);
+  justify-content: center;
+
+  &-button {
+    color: var(--grey);
+    font-family: var(--font-family);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.01213rem;
+    &-active{
+      color: var(--blue);
+    }
+  }
+
+}
