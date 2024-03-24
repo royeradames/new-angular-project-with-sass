@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {
+  AsyncPipe,
   NgClass,
   NgIf,
 } from '@angular/common';
@@ -19,6 +20,7 @@ import { TodoAppService } from '../../todo-app.service';
       [
         NgClass,
         NgIf,
+        AsyncPipe,
       ],
     standalone:
       true,
@@ -33,6 +35,10 @@ export class TasksActionsComponent {
     false;
   showingAll =
     true;
+  showingItems =
+    this
+      .todoAppService
+      .displayingItems;
 
   constructor(
     private todoAppService: TodoAppService
@@ -75,5 +81,12 @@ export class TasksActionsComponent {
     this.showingActive =
       false;
     this.todoAppService.showCompletedItems();
+  }
+
+  clearCompleted(
+    $event: MouseEvent
+  ) {
+    $event.preventDefault();
+    this.todoAppService.clearCompleted();
   }
 }

@@ -125,4 +125,24 @@ export class TodoAppService {
       ]
     );
   }
+
+  clearCompleted() {
+    this.allItems =
+      this.allItems.filter(
+        item =>
+          !item.isCompleted
+      );
+    const items =
+      this
+        .displayingItems
+        .value;
+    const clearCurrentDisplayingItems =
+      items.filter(
+        item =>
+          !item.isCompleted
+      );
+    this.displayingItems.next(
+      clearCurrentDisplayingItems
+    );
+  }
 }

@@ -1,3 +1,5 @@
+@import '_variables';
+
 .actions {
   display: flex;
   gap: 1.19rem;
@@ -7,7 +9,43 @@
   background: var(--background);
   box-shadow: var(--box-shadow);
   justify-content: center;
+  align-items: center;
+  @media(min-width: $desktop) {
+    width: 33.75rem;
+  }
 
+  &-left {
+    color: var(--grey);
+
+    font-family: var(--font-family);
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.01213rem;
+    @media(min-width: $desktop) {
+      font-size: 0.875rem;
+    }
+  }
+
+  &-clear {
+    color: var(--grey);
+
+    text-align: right;
+    font-family: var(--font-family);
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.01213rem;
+    @media(min-width: $desktop) {
+      font-size: 0.875rem;
+    }
+
+    &:hover {
+      color: var(--black);
+    }
+  }
   &-button {
     color: var(--grey);
     font-family: var(--font-family);

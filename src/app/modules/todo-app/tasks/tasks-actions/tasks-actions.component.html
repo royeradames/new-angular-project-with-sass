@@ -1,6 +1,7 @@
   <div class="actions">
+    <p class="actions-left">{{( showingItems | async)?.length }} items left</p>
     <button class="actions-button" [ngClass]="{'actions-button-active': showingAll}" (click)="showAll($event)">All</button>
     <button class="actions-button" [ngClass]="{'actions-button-active': showingActive}" (click)="showActive($event)">Active</button>
     <button class="actions-button" [ngClass]="{'actions-button-active': showingCompleted}" (click)="showCompleted($event)">Completed</button>
-    <button class="actions-button" *ngIf="showClearCompleted">Clear Completed</button>
+    <button class="actions-clear" (click)="clearCompleted($event)">Clear Completed</button>
   </div>
