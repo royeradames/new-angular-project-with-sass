@@ -18,17 +18,23 @@
   align-items: center;
 
   &-header {
-
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 12.5rem;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 1.5rem 0;
+    justify-content: center;
 
     &-wrapper {
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 12.5rem;
-      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 1.5rem 0;
+      height: max-content;
+      width: 20.4375rem;
+      @media(min-width: $desktop){
+        width: 33.75rem;
+      }
     }
 
     &-dark-mode {

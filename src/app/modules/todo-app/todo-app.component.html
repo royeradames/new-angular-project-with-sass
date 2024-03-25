@@ -1,16 +1,18 @@
 <article class="todo">
+  <header class="todo-header"
+          [ngClass]="{'todo-header-dark-mode': isDarkMode, 'todo-header-light-mode': !isDarkMode}"
+  >
   <div class="todo-header-wrapper"
-       [ngClass]="{'todo-header-dark-mode': isDarkMode, 'todo-header-light-mode': !isDarkMode}">
-    <header class="todo-header"
-    >
+
+  >
       <h1 class="todo-header-title">Todo</h1>
       <button (click)="toggleThemeMode($event, isDarkMode)" aria-label="Color theme changer"
               class="todo-header-theme-switch">
         <img [ngSrc]="themeModeImage.href" [alt]="themeModeImage.alt"
              height="20" width="20">
       </button>
-    </header>
   </div>
+    </header>
 
   <app-tasks></app-tasks>
 
